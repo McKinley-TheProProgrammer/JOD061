@@ -1,0 +1,245 @@
+IP CONFIG:
+Adaptador Ethernet VirtualBox Host-Only Network:
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Endereço IPv6 de link local . . . . . . . . : fe80::8129:f73b:672a:f32a%11
+   Endereço IPv4. . . . . . . .  . . . . . . . : 192.168.56.1
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
+   Gateway Padrão. . . . . . . . . . . . . . . :
+
+Adaptador Ethernet Ethernet:
+
+   Sufixo DNS específico de conexão. . . . . . :
+   Endereço IPv6 . . . . . . . . . . : 2804:14c:6583:4af2:1151:6e22:34ab:8142
+   Endereço IPv6 Temporário. . . . . . . . : 2804:14c:6583:4af2:e874:a4c8:c24c:e18d
+   Endereço IPv6 de link local . . . . . . . . : fe80::1151:6e22:34ab:8142%19
+   Endereço IPv4. . . . . . . .  . . . . . . . : 192.168.0.8
+   Máscara de Sub-rede . . . . . . . . . . . . : 255.255.255.0
+   Gateway Padrão. . . . . . . . . . . . . . . : fe80::5295:51ff:feec:5004%19
+                                                 192.168.0.1
+
+
+PING:
+
+Com Cabo de Rede:
+Disparando 192.168.0.1 com 32 bytes de dados:
+Resposta de 192.168.0.1: bytes=32 tempo=2ms TTL=64
+Resposta de 192.168.0.1: bytes=32 tempo=2ms TTL=64
+Resposta de 192.168.0.1: bytes=32 tempo=2ms TTL=64
+Resposta de 192.168.0.1: bytes=32 tempo=1ms TTL=64
+
+Estatísticas do Ping para 192.168.0.1:
+    Pacotes: Enviados = 4, Recebidos = 4, Perdidos = 0 (0% de
+             perda),
+Aproximar um número redondo de vezes em milissegundos:
+    Mínimo = 1ms, Máximo = 2ms, Média = 1ms
+
+==========================================================================
+
+Sem Cabo de Rede:
+>ping 192.168.0.1
+
+Disparando 192.168.0.1 com 32 bytes de dados:
+Falha geral.
+Falha geral.
+Falha geral.
+Falha geral.
+
+Estatísticas do Ping para 192.168.0.1:
+    Pacotes: Enviados = 4, Recebidos = 0, Perdidos = 4 (100% de
+             perda),
+
+
+
+
+
+NSLOOKUP Resolução do Nome:
+
+Servidor:  UnKnown
+Address:  2804:14d:1:0:181:213:132:2
+
+Não é resposta autoritativa:
+Nome:    www.iesb.br
+Address:  54.174.194.96
+
+===========================================================
+Servidor PadrÒo:  UnKnown
+Address:  2804:14d:1:0:181:213:132:2
+
+> nslookup www.iesb.br
+Servidor:  www.iesb.br
+Address:  54.174.194.96
+
+DNS request timed out.
+    timeout was 2 seconds.
+DNS request timed out.
+    timeout was 2 seconds.
+*** O tempo limite da solicitação para www.iesb.br expirou
+>
+
+
+
+NETSTAT:
+
+Conexões ativas
+
+  Proto  Endereço local         Endereço externo       Estado
+  TCP    0.0.0.0:135            wwwSUPORTiCOcom:0      LISTENING
+  TCP    0.0.0.0:445            wwwSUPORTiCOcom:0      LISTENING
+  TCP    0.0.0.0:5040           wwwSUPORTiCOcom:0      LISTENING
+  TCP    0.0.0.0:7680           wwwSUPORTiCOcom:0      LISTENING
+  TCP    0.0.0.0:17500          wwwSUPORTiCOcom:0      LISTENING
+  TCP    0.0.0.0:49664          wwwSUPORTiCOcom:0      LISTENING
+  TCP    0.0.0.0:49665          wwwSUPORTiCOcom:0      LISTENING
+  TCP    0.0.0.0:49666          wwwSUPORTiCOcom:0      LISTENING
+  TCP    0.0.0.0:49667          wwwSUPORTiCOcom:0      LISTENING
+  TCP    0.0.0.0:49668          wwwSUPORTiCOcom:0      LISTENING
+  TCP    0.0.0.0:49671          wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:843          wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:4800         wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:4801         wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:6463         wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:12025        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:12110        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:12119        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:12143        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:12465        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:12563        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:12993        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:12995        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:15292        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:15393        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:16494        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:17600        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:27275        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:45623        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:51253        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:55420        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:59652        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:59652        wwwSUPORTiCOcom:59656  ESTABLISHED
+  TCP    127.0.0.1:59653        wwwSUPORTiCOcom:0      LISTENING
+  TCP    127.0.0.1:59656        wwwSUPORTiCOcom:59652  ESTABLISHED
+  TCP    127.0.0.1:59685        wwwSUPORTiCOcom:59686  ESTABLISHED
+  TCP    127.0.0.1:59686        wwwSUPORTiCOcom:59685  ESTABLISHED
+  TCP    127.0.0.1:59696        wwwSUPORTiCOcom:59697  ESTABLISHED
+  TCP    127.0.0.1:59697        wwwSUPORTiCOcom:59696  ESTABLISHED
+  TCP    192.168.0.8:139        wwwSUPORTiCOcom:0      LISTENING
+  TCP    192.168.0.8:54750      37.156.185.156:https   ESTABLISHED
+  TCP    192.168.0.8:54756      52.179.224.121:https   ESTABLISHED
+  TCP    192.168.0.8:54776      162.159.130.233:https  ESTABLISHED
+  TCP    192.168.0.8:54777      162.159.133.234:https  ESTABLISHED
+  TCP    192.168.0.8:54778      162.159.138.232:https  ESTABLISHED
+  TCP    192.168.0.8:54779      ec2-52-4-98-61:https   ESTABLISHED
+  TCP    192.168.0.8:54780      ec2-34-203-127-223:https  ESTABLISHED
+  TCP    192.168.0.8:54781      162.159.129.235:https  ESTABLISHED
+  TCP    192.168.0.8:54786      162.125.19.131:https   ESTABLISHED
+  TCP    192.168.0.8:54790      52.167.253.237:https   TIME_WAIT
+  TCP    192.168.0.8:54801      r-25-45-62-5:https     ESTABLISHED
+  TCP    192.168.0.8:54802      r-25-45-62-5:https     CLOSE_WAIT
+  TCP    192.168.0.8:54804      r-25-45-62-5:https     CLOSE_WAIT
+  TCP    192.168.0.8:54836      192.16.48.200:https    ESTABLISHED
+  TCP    192.168.0.8:54841      64.4.54.254:https      ESTABLISHED
+  TCP    192.168.0.8:54842      ec2-54-94-234-75:https  ESTABLISHED
+  TCP    192.168.0.8:54843      lb-140-82-113-4-iad:https  ESTABLISHED
+  TCP    192.168.0.8:54844      lb-140-82-113-4-iad:https  ESTABLISHED
+  TCP    192.168.0.8:54845      151.101.94.217:https   ESTABLISHED
+  TCP    192.168.0.8:54846      151.101.92.133:https   ESTABLISHED
+  TCP    192.168.0.8:54847      151.101.92.133:https   ESTABLISHED
+  TCP    192.168.0.8:54849      20.36.253.92:https     ESTABLISHED
+  TCP    192.168.0.8:54852      r-58-42-234-77:http    TIME_WAIT
+  TCP    192.168.0.8:59751      nyc04-008:http         ESTABLISHED
+  TCP    192.168.56.1:139       wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::]:135               wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::]:445               wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::]:7680              wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::]:17500             wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::]:49664             wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::]:49665             wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::]:49666             wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::]:49667             wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::]:49668             wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::]:49671             wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::1]:12025            wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::1]:12110            wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::1]:12119            wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::1]:12143            wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::1]:12465            wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::1]:12563            wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::1]:12993            wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::1]:12995            wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::1]:27275            wwwSUPORTiCOcom:0      LISTENING
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54805  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54806  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54807  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54808  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54814  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54815  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54824  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54825  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54826  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54827  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54828  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54829  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54834  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54835  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54837  TIME_WAIT
+  TCP    [::1]:27275            wwwSUPORTiCOcom:54838  TIME_WAIT
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54774  [2800:3f0:4003:c01::bc]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54797  [2800:3f0:4004:809::2004]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54798  [2800:3f0:4004:809::2004]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54799  [2800:3f0:4004:809::2001]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54809  [2800:3f0:4004:801::200a]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54812  [2607:f8b0:4003:c04::be]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54817  [2800:3f0:4004:808::200e]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54818  [2800:3f0:4004:808::2003]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54819  [2800:3f0:4004:801::200e]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54820  [2800:3f0:4004:806::200e]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54821  [2800:3f0:4004:800::200e]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54832  g2600-1419-d800-01aa-0000-0000-0000-353e:https  CLOSE_WAIT
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54833  [2800:3f0:4004:806::200a]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54839  [2800:3f0:4004:805::200a]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54840  [2800:3f0:4004:807::200e]:https  ESTABLISHED
+  TCP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:54850  [2620:1ec:c11::200]:https  ESTABLISHED
+  UDP    0.0.0.0:5050           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5355           *:*
+  UDP    0.0.0.0:17500          *:*
+  UDP    0.0.0.0:62673          *:*
+  UDP    127.0.0.1:1900         *:*
+  UDP    127.0.0.1:62668        *:*
+  UDP    127.0.0.1:62671        *:*
+  UDP    127.0.0.1:62922        *:*
+  UDP    192.168.0.8:137        *:*
+  UDP    192.168.0.8:138        *:*
+  UDP    192.168.0.8:1900       *:*
+  UDP    192.168.0.8:2177       *:*
+  UDP    192.168.0.8:62921      *:*
+  UDP    192.168.56.1:137       *:*
+  UDP    192.168.56.1:138       *:*
+  UDP    192.168.56.1:1900      *:*
+  UDP    192.168.56.1:2177      *:*
+  UDP    192.168.56.1:62920     *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5355              *:*
+  UDP    [::1]:1900             *:*
+  UDP    [::1]:62919            *:*
+  UDP    [2804:14c:6583:4af2:1151:6e22:34ab:8142]:2177  *:*
+  UDP    [2804:14c:6583:4af2:e874:a4c8:c24c:e18d]:2177  *:*
+  UDP    [fe80::1151:6e22:34ab:8142%19]:1900  *:*
+  UDP    [fe80::1151:6e22:34ab:8142%19]:2177  *:*
+  UDP    [fe80::1151:6e22:34ab:8142%19]:62918  *:*
+  UDP    [fe80::8129:f73b:672a:f32a%11]:1900  *:*
+  UDP    [fe80::8129:f73b:672a:f32a%11]:2177  *:*
+  UDP    [fe80::8129:f73b:672a:f32a%11]:62917  *:*
