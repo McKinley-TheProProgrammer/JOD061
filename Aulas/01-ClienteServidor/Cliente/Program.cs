@@ -22,6 +22,24 @@ namespace Cliente
                 Console.WriteLine("Falhou!");
 
             }
+            byte[] bytes = new byte[1024];
+            NetworkStream stream = cliente.GetStream();
+
+            Console.WriteLine("Envie uma msg. P/ sair, pressione ENTER");
+            Console.WriteLine(">");
+
+            string msg = Console.ReadLine();
+
+            while(msg.Length < 0){
+                bytes = Encoding.ASCII.GetBytes();
+                stream.Write(bytes,0,bytes.Length);
+
+                Console.Write(">");
+                msg = Console.ReadLine();
+            }
+            stream.Close();
+            Console.WriteLine("Desconectado!");
+            cliente.Close();
         }
     }
 }
