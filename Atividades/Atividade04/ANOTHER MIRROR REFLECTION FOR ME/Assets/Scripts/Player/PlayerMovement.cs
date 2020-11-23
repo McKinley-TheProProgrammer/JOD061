@@ -18,6 +18,8 @@ public class PlayerMovement : NetworkBehaviour
     [SerializeField] Pooling prefabTiro;
     GameObject tirinho;
     [SerializeField] TakeDamage takeDamage;
+
+    
     public override void OnStartServer()
     {
         color = InstanciarCorRandomica();      
@@ -32,6 +34,7 @@ public class PlayerMovement : NetworkBehaviour
         //Camera.main.transform.localPosition = new Vector3(0,1.43f,-5.4f);
         //SetCameraSettings();
     }
+
     void SetCameraSettings()
     {
         cameraGroupPlayers = GameObject.FindWithTag("TargetCamera").GetComponent<CinemachineTargetGroup>();
@@ -84,12 +87,12 @@ public class PlayerMovement : NetworkBehaviour
         {
             return;
         }
-        if (PressSpace())
+        if (PressFtoPayRespect())
         {
             CmdMudarCorDoMaterial(InstanciarCorRandomica());
             Pular();
         }
-        if (PressFtoPayRespect())
+        if (PressSpace())
         {
             CmdAtirar();
         }    
@@ -130,7 +133,7 @@ public class PlayerMovement : NetworkBehaviour
     //[Command]
     bool PressFtoPayRespect()
     {
-        return Input.GetKeyDown(KeyCode.X);
+        return Input.GetKeyDown(KeyCode.F);
     }
     /// <summary>
     /// Checa se está somente no servidor

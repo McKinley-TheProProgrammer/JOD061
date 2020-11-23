@@ -102,7 +102,7 @@ namespace Mirror
                 }
             }
         }
-
+        
         public override void OnValidate()
         {
             // always >= 0

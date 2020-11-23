@@ -17,7 +17,7 @@ namespace Mirror
     public class NetworkManagerHUD : MonoBehaviour
     {
         NetworkManager manager;
-
+        
         /// <summary>
         /// Whether to show the default control HUD at runtime.
         /// </summary>
@@ -27,16 +27,39 @@ namespace Mirror
         /// The horizontal offset in pixels to draw the HUD runtime GUI at.
         /// </summary>
         public int offsetX;
-
+        
         /// <summary>
         /// The vertical offset in pixels to draw the HUD runtime GUI at.
         /// </summary>
         public int offsetY;
 
+        public float countdown = 3;
+        float aux;
+        public bool timeStart;
+        //[SerializeField] NetworkManagerHUD managerHUD;
+        public void CountingDown()
+        {
+            if (timeStart)
+            {
+                countdown -= Time.deltaTime;
+                ClientScene.Ready(NetworkClient.connection);
+
+                
+                if (countdown <= 0)
+                {
+                    countdown = aux;
+                    if (ClientScene.localPlayer == null)
+                    {
+                        ClientScene.AddPlayer(NetworkClient.connection);
+                    }                   
+                }
+            }
+        }
         void Awake()
         {
             manager = GetComponent<NetworkManager>();
         }
+        
 
         void OnGUI()
         {
@@ -49,26 +72,23 @@ namespace Mirror
                 StartButtons();
             }
             else
-            {
+            {           
                 StatusLabels();
             }
-
+            
             // client ready
             if (NetworkClient.isConnected && !ClientScene.ready)
             {
                 if (GUILayout.Button("Client Ready"))
                 {
-                    ClientScene.Ready(NetworkClient.connection);
-
-                    if (ClientScene.localPlayer == null)
-                    {
-                        ClientScene.AddPlayer(NetworkClient.connection);
-                    }
+                    timeStart = true;
+                    CountingDown();
+                    
                 }
             }
 
             StopButtons();
-
+            
             GUILayout.EndArea();
         }
 
@@ -89,6 +109,7 @@ namespace Mirror
                 GUILayout.BeginHorizontal();
                 if (GUILayout.Button("Client"))
                 {
+                    
                     manager.StartClient();
                 }
                 manager.networkAddress = GUILayout.TextField(manager.networkAddress);
@@ -108,7 +129,8 @@ namespace Mirror
             else
             {
                 // Connecting
-                GUILayout.Label("Connecting to " + manager.networkAddress + "..");
+                
+                GUILayout.Label("Connecting to " + manager.networkAddress + "..");                
                 if (GUILayout.Button("Cancel Connection Attempt"))
                 {
                     manager.StopClient();
