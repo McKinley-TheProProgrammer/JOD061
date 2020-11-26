@@ -33,28 +33,8 @@ namespace Mirror
         /// </summary>
         public int offsetY;
 
-        public float countdown = 3;
-        float aux;
-        public bool timeStart;
         //[SerializeField] NetworkManagerHUD managerHUD;
-        public void CountingDown()
-        {
-            if (timeStart)
-            {
-                countdown -= Time.deltaTime;
-                ClientScene.Ready(NetworkClient.connection);
-
-                
-                if (countdown <= 0)
-                {
-                    countdown = aux;
-                    if (ClientScene.localPlayer == null)
-                    {
-                        ClientScene.AddPlayer(NetworkClient.connection);
-                    }                   
-                }
-            }
-        }
+        
         void Awake()
         {
             manager = GetComponent<NetworkManager>();
@@ -81,8 +61,13 @@ namespace Mirror
             {
                 if (GUILayout.Button("Client Ready"))
                 {
-                    timeStart = true;
-                    CountingDown();
+                    ClientScene.Ready(NetworkClient.connection);
+
+                    if (ClientScene.localPlayer == null)
+                    {
+                        ClientScene.AddPlayer(NetworkClient.connection);
+                    }
+                   
                     
                 }
             }
